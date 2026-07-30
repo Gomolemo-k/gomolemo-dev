@@ -34,7 +34,9 @@ const skillCategories = [
       "CI/CD Pipelines",
       "Vercel AI SDK",
       "n8n / Zapier",
-      "Biome",
+      "Cloudflare R2 / Workers",
+      "Firecrawl",
+      "Biome / Knip",
     ],
   },
   {
@@ -44,7 +46,8 @@ const skillCategories = [
       "next-intl (i18n)",
       "OpenAI / Gemini / DeepSeek",
       "RAG / Semantic Search",
-      "Agile / Scrum",
+      "Zustand / TanStack Query",
+      "Recharts",
     ],
   },
 ];

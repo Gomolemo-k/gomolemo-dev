@@ -1,68 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
-
-const projects = [
-  {
-    title: "MySelf Pilot",
-    description:
-      "Full stack middleware hub connecting autonomous vehicle taxi companies, logistics fleets, delivery operators, and city transport systems into a unified ecosystem for shared payments, tariffs, user data, and vehicle access.",
-    tags: [
-      "Next.js 16",
-      "React 19",
-      "TypeScript",
-      "PostgreSQL",
-      "Drizzle ORM",
-      "Stripe",
-      "Better Auth",
-      "Vercel AI SDK",
-      "Tailwind CSS v4",
-      "Docker / Dokploy",
-    ],
-    href: "https://myselfpilot.com",
-  },
-  {
-    title: "AXONS Protocol Website",
-    description:
-      "Official consortium platform for the AXONS open IoT security protocol. Production grade SaaS featuring protocol specification docs, tiered membership with Stripe billing, AI powered protocol assistant with RAG, compliance certification suite, MCP server, and complete internationalization across 8 languages.",
-    tags: [
-      "Next.js 16",
-      "React 19",
-      "TypeScript",
-      "PostgreSQL",
-      "Drizzle ORM",
-      "Stripe",
-      "Better Auth",
-      "Vercel AI SDK",
-      "Tailwind CSS v4",
-      "Fumadocs / MDX",
-      "n8n",
-      "Resend",
-      "NocoDB",
-      "Orama",
-      "Radix UI / shadcn/ui",
-      "Google Gemini",
-      "Docker / Dokploy",
-    ],
-    href: "https://axonsprotocol.com",
-  },
-  {
-    title: "AXONS AI Agent Skill Registry",
-    description:
-      "AI agent skill registry published on the skills.sh ecosystem, encoding core IoT communication protocol standards into machine executable skill definitions for automated development workflows.",
-    tags: [
-      "Next.js",
-      "React 19",
-      "TypeScript",
-      "Fumadocs",
-      "MDX",
-      "Vercel AI SDK",
-      "Docker",
-    ],
-    href: "https://github.com/Germangalia/axons-agents-skills",
-  },
-];
+import { projects } from "@/data/projects";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
@@ -103,11 +44,8 @@ export default function Projects() {
           </motion.p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, i) => (
-              <motion.a
+              <motion.div
                 key={project.title}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 custom={i}
                 variants={cardVariants}
                 initial="hidden"
@@ -118,7 +56,7 @@ export default function Projects() {
                   boxShadow:
                     "0 20px 40px -12px rgba(232, 160, 180, 0.25)",
                 }}
-                className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/50"
+                className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-accent/50"
               >
                 <motion.div
                   className="mb-4 flex size-10 items-center justify-center rounded-xl bg-accent/10"
@@ -142,11 +80,11 @@ export default function Projects() {
                 <h3 className="mb-2 text-lg font-semibold text-foreground transition-colors group-hover:text-accent">
                   {project.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed text-muted">
+                <p className="mb-4 flex-1 text-sm leading-relaxed text-muted">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {project.tags.slice(0, 4).map((tag) => (
                     <span
                       key={tag}
                       className="rounded-md bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent"
@@ -155,7 +93,26 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-              </motion.a>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+                >
+                  Read more
+                  <svg
+                    className="size-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
