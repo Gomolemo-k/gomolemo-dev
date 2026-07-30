@@ -7,10 +7,11 @@ const skillCategories = [
   {
     label: "Frontend",
     skills: [
-      "Next.js / React 19",
+      "Next.js 16 / React 19",
       "TypeScript",
       "Tailwind CSS v4",
-      "HTML5 / CSS3",
+      "Radix UI / shadcn/ui",
+      "Framer Motion",
       "Fumadocs / MDX",
     ],
   },
@@ -19,9 +20,10 @@ const skillCategories = [
     skills: [
       "Node.js",
       "PostgreSQL / Drizzle ORM",
-      "REST APIs",
       "Neon PostgreSQL",
       "Stripe Billing",
+      "Orama (Vector Search)",
+      "Resend / React Email",
     ],
   },
   {
@@ -32,15 +34,17 @@ const skillCategories = [
       "CI/CD Pipelines",
       "Vercel AI SDK",
       "n8n / Zapier",
+      "Biome",
     ],
   },
   {
-    label: "Auth & i18n",
+    label: "Auth, AI & i18n",
     skills: [
       "Better Auth / OAuth",
       "next-intl (i18n)",
+      "OpenAI / Gemini / DeepSeek",
+      "RAG / Semantic Search",
       "Agile / Scrum",
-      "Vercel / Cloudflare",
     ],
   },
 ];

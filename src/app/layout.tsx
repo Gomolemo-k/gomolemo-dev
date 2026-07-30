@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gomolemo Kgatitsoe — Full Stack Web Developer",
+  title: "Gomolemo Kgatitsoe | Full Stack Web Developer",
   description:
-    "Full Stack Web Developer specialising in Next.js, React, TypeScript, and PostgreSQL. Building production-grade SaaS platforms.",
+    "Full Stack Web Developer specialising in Next.js, React, TypeScript, and PostgreSQL. Building production grade SaaS platforms.",
 };
 
 export default function RootLayout({
