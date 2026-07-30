@@ -1,24 +1,39 @@
 "use client";
 
+import { type FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = data.get("name") as string;
+    const email = data.get("email") as string;
+    const message = data.get("message") as string;
+    window.location.href = `mailto:kgatitsoeg321@gmail.com?subject=Hello from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+    setSent(true);
+    setTimeout(() => setSent(false), 3000);
+  };
+
   return (
     <AnimatedSection>
       <section id="contact" className="px-6 py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl text-center">
-          <motion.h2
-            className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-accent"
+        <div className="mx-auto max-w-xl text-center">
+          <motion.p
+            className="mb-2 font-mono text-xs text-accent sm:text-sm"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
           >
-            Contact
-          </motion.h2>
+            &lt;Contact /&gt;
+          </motion.p>
           <motion.p
-            className="mb-6 text-lg text-muted"
+            className="mb-8 text-lg text-muted"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -26,23 +41,66 @@ export default function Contact() {
           >
             Got a project or just want to say hi?
           </motion.p>
-          <motion.a
-            href="mailto:kgatitsoeg321@gmail.com"
-            className="inline-block rounded-full bg-accent px-8 py-4 text-sm font-medium text-white shadow-lg shadow-accent/25 transition-colors hover:bg-accent-hover"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            kgatitsoeg321@gmail.com
-          </motion.a>
-          <motion.p
-            className="mt-4 text-sm text-muted"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+
+          <motion.form
+            onSubmit={handleSubmit}
+            className="space-y-4 text-left"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ delay: 0.25, duration: 0.6 }}
           >
-            +27 061 412 1201
-          </motion.p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="mb-1.5 block text-xs font-medium text-muted">
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="mb-1.5 block text-xs font-medium text-muted">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                  placeholder="you@example.com"
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-muted">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                required
+                className="w-full resize-none rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                placeholder="Tell me about your project..."
+              />
+            </div>
+            <motion.button
+              type="submit"
+              className="w-full rounded-full bg-accent px-8 py-3.5 text-sm font-medium text-white shadow-lg shadow-accent/25 transition-colors hover:bg-accent-hover"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {sent ? "Sent!" : "Send message"}
+            </motion.button>
+          </motion.form>
+
           <motion.div
             className="mt-10 flex justify-center gap-8"
             initial={{ opacity: 0, y: 20 }}

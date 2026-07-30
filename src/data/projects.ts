@@ -6,6 +6,7 @@ export interface Project {
   longDescription: string[];
   tags: string[];
   href: string;
+  image: string;
   highlights: { label: string; detail: string }[];
   techStack: { category: string; items: string[] }[];
   role: string;
@@ -37,6 +38,7 @@ export const projects: Project[] = [
       "Docker / Dokploy",
     ],
     href: "https://myselfpilot.com",
+    image: "/projects/myself-pilot.jpg",
     highlights: [
       {
         label: "Billing System",
@@ -131,6 +133,7 @@ export const projects: Project[] = [
       "Docker / Dokploy",
     ],
     href: "https://axonsprotocol.com",
+    image: "/projects/axons-protocol.jpg",
     highlights: [
       {
         label: "AI Protocol Assistant",
@@ -238,6 +241,7 @@ export const projects: Project[] = [
       "Docker",
     ],
     href: "https://github.com/Germangalia/axons-agents-skills",
+    image: "/projects/axons-agent-skill-registry.jpg",
     highlights: [
       {
         label: "Structured Registry",
@@ -309,6 +313,7 @@ export const projects: Project[] = [
       "Cloudflare R2",
     ],
     href: "https://opencavalliance.com",
+    image: "/projects/open-cav-alliance.jpg",
     highlights: [
       {
         label: "Provider Abstraction",

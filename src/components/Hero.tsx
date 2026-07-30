@@ -28,8 +28,17 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="max-w-2xl text-center"
+        className="flex flex-col items-center"
       >
+        <motion.div
+          variants={item}
+          className="mb-8 size-32 overflow-hidden rounded-full border-2 border-accent/30 p-1 sm:size-36"
+        >
+          <div className="flex size-full items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-hover text-3xl font-bold text-white sm:text-4xl">
+            GK
+          </div>
+        </motion.div>
+
         <motion.div variants={item} className="mb-6 flex flex-wrap items-center justify-center gap-2">
           <span className="rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted backdrop-blur-sm">
             Johannesburg, ZA
@@ -38,15 +47,16 @@ export default function Hero() {
             Open to Remote Worldwide
           </span>
         </motion.div>
+
         <motion.p
           variants={item}
-          className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent"
+          className="mb-4 font-mono text-xs text-accent sm:text-sm"
         >
-          Full Stack Web Developer
+          &lt;Full Stack Web Developer /&gt;
         </motion.p>
         <motion.h1
           variants={item}
-          className="mb-6 text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl"
+          className="mb-6 text-center text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl"
         >
           Gomolemo
           <br />
@@ -54,11 +64,11 @@ export default function Hero() {
         </motion.h1>
         <motion.p
           variants={item}
-          className="mx-auto max-w-lg text-lg leading-relaxed text-muted"
+          className="mx-auto max-w-lg text-center text-lg leading-relaxed text-muted"
         >
           Developer with 3+ years of experience shipping
           production grade SaaS platforms, from multi tenant billing systems to
-          AI-powered features. Comfortable across the entire stack.
+          AI powered features. Comfortable across the entire stack.
         </motion.p>
         <motion.div
           variants={item}
