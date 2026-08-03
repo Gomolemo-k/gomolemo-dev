@@ -79,6 +79,7 @@ export default async function ProjectPage({
                 src={project.logo}
                 alt={`${project.title} logo`}
                 fill
+                sizes="(max-width: 768px) 100vw, 896px"
                 className="object-contain p-6 sm:p-10"
               />
             ) : (
@@ -94,6 +95,7 @@ export default async function ProjectPage({
                   src={project.logo}
                   alt={`${project.title} logo`}
                   fill
+                  sizes="(min-width: 640px) 80px, 64px"
                   className="object-contain"
                 />
               ) : (

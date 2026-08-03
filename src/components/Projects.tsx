@@ -77,6 +77,7 @@ export default function Projects() {
                         src={project.image}
                         alt={`${project.title} screenshot`}
                         fill
+                        sizes="(min-width: 1072px) 564px, 100vw"
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
                     ) : (
@@ -104,6 +105,7 @@ export default function Projects() {
                             src={project.logo}
                             alt={`${project.title} logo`}
                             fill
+                            sizes="60px"
                             className="object-contain"
                           />
                         ) : (

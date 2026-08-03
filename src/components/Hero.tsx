@@ -44,7 +44,7 @@ export default function Hero() {
             Johannesburg, ZA
           </span>
           <span className="rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted backdrop-blur-sm">
-            Open to Remote Worldwide
+            Available for Opportunities
           </span>
         </motion.div>
 
