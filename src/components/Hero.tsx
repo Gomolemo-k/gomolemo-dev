@@ -66,7 +66,7 @@ export default function Hero() {
           variants={item}
           className="mx-auto max-w-lg text-center text-lg leading-relaxed text-muted"
         >
-          Developer with 3+ years of experience shipping
+          Developer with 4+ years of experience shipping
           production grade SaaS platforms, from multi tenant billing systems to
           AI powered features. Comfortable across the entire stack.
         </motion.p>

@@ -6,7 +6,8 @@ export interface Project {
   longDescription: string[];
   tags: string[];
   href: string;
-  image: string;
+  image?: string;
+  logo?: string;
   highlights: { label: string; detail: string }[];
   techStack: { category: string; items: string[] }[];
   role: string;
@@ -38,7 +39,8 @@ export const projects: Project[] = [
       "Docker / Dokploy",
     ],
     href: "https://myselfpilot.com",
-    image: "/projects/myself-pilot.jpg",
+    image: "/project/myselfpilot/myselfpilot-homepage.png",
+    logo: "/logos/myselfpilot/myselfpilot-logo.png",
     highlights: [
       {
         label: "Billing System",
@@ -133,7 +135,8 @@ export const projects: Project[] = [
       "Docker / Dokploy",
     ],
     href: "https://axonsprotocol.com",
-    image: "/projects/axons-protocol.jpg",
+    image: "/project/axons/axons-homepage.png",
+    logo: "/logos/axons/axons-green.logo.png",
     highlights: [
       {
         label: "AI Protocol Assistant",
@@ -240,8 +243,9 @@ export const projects: Project[] = [
       "Vercel AI SDK",
       "Docker",
     ],
-    href: "https://github.com/Germangalia/axons-agents-skills",
-    image: "/projects/axons-agent-skill-registry.jpg",
+    href: "https://www.skills.sh/germangalia/axons-agents-skills",
+    image: "/project/skill/skill.png",
+    logo: "/logos/skills/skills.png",
     highlights: [
       {
         label: "Structured Registry",
@@ -313,7 +317,8 @@ export const projects: Project[] = [
       "Cloudflare R2",
     ],
     href: "https://opencavalliance.com",
-    image: "/projects/open-cav-alliance.jpg",
+    image: "/project/opencav/opencav-homepage.png",
+    logo: "/logos/opencav/new-logo.png",
     highlights: [
       {
         label: "Provider Abstraction",
