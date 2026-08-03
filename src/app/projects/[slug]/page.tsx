@@ -60,7 +60,7 @@ export default async function ProjectPage({
 
         <div className="relative mb-16 overflow-hidden rounded-2xl border border-border bg-card">
           <div
-            className={`relative h-40 bg-gradient-to-br sm:h-56 ${gradients[0]}`}
+            className={`relative h-64 bg-gradient-to-br sm:h-80 md:h-96 ${gradients[0]}`}
           >
             {project.image ? (
               <>
@@ -68,9 +68,11 @@ export default async function ProjectPage({
                   src={project.image}
                   alt={`${project.title} screenshot`}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 896px"
+                  priority
+                  className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-card/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
               </>
             ) : project.logo ? (
               <Image
