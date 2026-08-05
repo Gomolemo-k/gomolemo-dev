@@ -142,6 +142,23 @@ export default async function ProjectPage({
           </div>
         </div>
 
+        {project.video && (
+          <section className="mb-16">
+            <h2 className="mb-6 text-2xl font-semibold tracking-tight">
+              Demo
+            </h2>
+            <video
+              className="aspect-video w-full rounded-2xl border border-border bg-card object-cover"
+              controls
+              preload="metadata"
+              playsInline
+            >
+              <source src={project.video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </section>
+        )}
+
         <section className="mb-16">
           <h2 className="mb-6 text-2xl font-semibold tracking-tight">
             About the project.

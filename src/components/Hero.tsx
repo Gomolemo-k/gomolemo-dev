@@ -66,7 +66,7 @@ export default function Hero() {
           variants={item}
           className="mx-auto max-w-lg text-center text-lg leading-relaxed text-muted"
         >
-          Developer with 4+ years of experience shipping
+          Developer with 3+ years of experience shipping
           production grade SaaS platforms, from multi tenant billing systems to
           AI powered features. Comfortable across the entire stack.
         </motion.p>
@@ -89,6 +89,28 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
           >
             Get in touch
+          </motion.a>
+          <motion.a
+            href="/Gomolemo-Kgatitsoe-CV.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors hover:border-accent hover:bg-accent-light/20"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            My Resume
+            <svg
+              className="size-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"
+              />
+            </svg>
           </motion.a>
         </motion.div>
       </motion.div>

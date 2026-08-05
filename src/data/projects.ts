@@ -11,18 +11,19 @@ export interface Project {
   highlights: { label: string; detail: string }[];
   techStack: { category: string; items: string[] }[];
   role: string;
+  video?: string;
 }
 
 export const projects: Project[] = [
   {
     slug: "myself-pilot",
     title: "MySelf Pilot",
-    subtitle: "Autonomous Vehicle Middleware Hub",
+    subtitle: "The Hub for Autonomous Mobility",
     description:
-      "Full stack middleware hub connecting autonomous vehicle taxi companies, logistics fleets, delivery operators, and city transport systems into a unified ecosystem for shared payments, tariffs, user data, and vehicle access.",
+      "Unified operations platform connecting autonomous taxi companies, delivery fleets, logistics operators, and city transit systems  with live fleet monitoring, remote command and dispatch, smart charging, route optimization, and OTA updates all managed from a single hub.",
     longDescription: [
-      "MySelf Pilot is a production grade full stack platform that serves as a middleware hub for the autonomous vehicle ecosystem. It connects disparate operators — autonomous taxi companies, logistics fleets, delivery services, and city transport authorities — into a single unified network for sharing payments, tariffs, user authentication, and vehicle access data.",
-      "The platform features a Stripe billing system supporting monthly and annual subscriptions, lifetime memberships, and credit based pricing tiers. It includes a customer portal, webhook processing for real time payment events, and revenue tracking dashboards.",
+      "MySelf Pilot is a production grade platform that connects autonomous mobility operators into a single ecosystem. Autonomous taxi companies, delivery fleets, logistics operators, fleet managers, and city transport systems join the same hub so vehicles, riders, and data flow freely across the entire network without complex integrations.",
+      "Operators run their whole operation from one command center with live fleet monitoring with remote dispatch and scheduling, automated smart charging and autonomous parking across operational zones, route optimization with a unified cross-operator tariff layer, and telemetry-driven insights with over-the-air updates. The platform scales from a single city fleet to a global network of operators and vehicle types.",
       "A GitHub integrated protocol management system provides version tracking, document rendering, threaded discussions, voting, proposals, and bidirectional repository synchronisation. The platform also integrates multi provider AI capabilities via the Vercel AI SDK for chat, image generation, and text processing workflows.",
       "Built with Next.js App Router using server actions and Drizzle ORM on Neon PostgreSQL, with Better Auth supporting Google OAuth and credentials across 8 internationalised locales. Deployed via Docker standalone builds with Dokploy for production orchestration.",
     ],
@@ -43,9 +44,9 @@ export const projects: Project[] = [
     logo: "/logos/myselfpilot/myselfpilot-logo.png",
     highlights: [
       {
-        label: "Billing System",
+        label: "Fleet Operations",
         detail:
-          "4 tier pricing with monthly/annual subscriptions, lifetime memberships, and credit based tiers. Stripe customer portal and webhook driven revenue tracking.",
+          "Live fleet monitoring with a remote command center for real time vehicle tracking, mission dispatch, and scheduling across an entire autonomous fleet.",
       },
       {
         label: "AI Integration",
@@ -58,9 +59,9 @@ export const projects: Project[] = [
           "Protocol management with version tracking, threaded discussions, voting, proposals, and bidirectional repository synchronisation via Octokit.",
       },
       {
-        label: "Internationalisation",
+        label: "Mobility & Traffic",
         detail:
-          "Full platform translation across 8 locales with next-intl, including RTL support and locale aware formatting.",
+          "Smart charging and autonomous parking management, route optimization, and a unified cross-operator tariff layer for consistent fare handling.",
       },
     ],
     techStack: [
@@ -101,18 +102,18 @@ export const projects: Project[] = [
         items: ["Docker", "Dokploy", "CI/CD"],
       },
     ],
-    role: "Sole full stack developer and architect — designed the system architecture, implemented every feature, managed infrastructure, and coordinated the complete development lifecycle.",
+    role: "Sole full stack developer and architect  designed the unified operations hub from the fleet command center to the tariff layer, built every feature, managed infrastructure, and owned the full development lifecycle end to end.",
   },
   {
     slug: "axons-protocol",
     title: "AXONS Protocol Website",
-    subtitle: "Official Consortium Platform for IoT Security Protocol",
+    subtitle: "Secure Open Standard for IoT Communication",
     description:
-      "Official consortium platform for the AXIONS open IoT security protocol. Production grade SaaS featuring protocol specification docs, tiered membership with Stripe billing, AI powered protocol assistant with RAG, compliance certification suite, MCP server, and complete internationalization across 8 languages.",
+      "Open, security-first protocol standard for real time IoT communication  unifying peer-to-peer, client-to-server, and server-to-server topologies on TLS 1.3, mTLS, and Ed25519 cryptography. The consortium platform hosts the live specification, an AI protocol assistant, and compliance tooling.",
     longDescription: [
-      "AXONS (Advanced eXchange Open Nodes Security) is an open, security first protocol standard for real time IoT communication. The website serves as the official consortium platform hosting the full protocol specification, managing tiered membership, providing an AI powered protocol assistant, and running a compliance certification suite.",
-      "The platform features a comprehensive protocol specification documentation site built with Fumadocs MDX, supporting versioning, full text search, and multi section navigation. The tiered membership system includes Free, Contributor ($5K), Corporate ($15K), and Strategic ($45K) tiers with automated Stripe billing, customer portal, and role based access control.",
-      "A key feature is the AI Protocol Assistant — a RAG powered Q&A chatbot using Orama vector embeddings for semantic document search, orchestrated through n8n workflows and powered by Google Gemini 2.0 Flash. The platform also includes a general AI chat with multi model support (GPT-4o, DeepSeek R1, Perplexity), an AI image generation playground, and a compliance testing suite with a full certification engine.",
+      "AXONS (Advanced eXchange Open Nodes Security) is an open, security-first protocol standard for real time IoT communication. Built on TLS 1.3, mutual TLS, WebSocket, JSON-RPC 2.0, and Ed25519 signatures, it unifies peer-to-peer, client-to-server, and server-to-server topologies into a single battle tested standard — from edge devices to global cloud federations.",
+      "The website is the official consortium platform hosting the full protocol specification as a documentation site built with Fumadocs MDX, supporting versioning, full text search, and multi section navigation. Consortium membership provides voting rights in technical decisions, early access to draft specifications, working group participation, and proposal submission.",
+      "A key feature is the AI Protocol Assistant a RAG powered Q&A chatbot using Orama vector embeddings for semantic document search, orchestrated through n8n workflows and powered by Google Gemini 2.0 Flash. The platform also includes a general AI chat with multi model support (GPT-4o, DeepSeek R1, Perplexity), an AI image generation playground, and a compliance testing suite with a full certification engine.",
       "Additional capabilities include an MCP (Model Context Protocol) server exposing protocol resources and tools, a blog and newsletter system using NocoDB CMS with React Email and Resend automations, a user dashboard with account management and support tickets, and a complete admin panel. The entire platform is internationalised across 8 languages (EN, ZH, AR, ES, FR, KO, JA, DE) using next-intl.",
     ],
     tags: [
@@ -220,7 +221,7 @@ export const projects: Project[] = [
         items: ["Docker", "Dokploy", "Cloudflare R2", "pnpm", "Biome"],
       },
     ],
-    role: "Sole full stack developer and architect — designed the system architecture, implemented every feature, managed infrastructure, and coordinated the complete development lifecycle.",
+    role: "Sole full stack developer and architect  built the consortium platform around the protocol specification, from the AI assistant and compliance engine to the MCP server, and owned infrastructure and the full development lifecycle.",
   },
   {
     slug: "axons-agent-skill-registry",
@@ -286,13 +287,13 @@ export const projects: Project[] = [
   {
     slug: "open-cav-alliance",
     title: "Open CAV Alliance",
-    subtitle: "SaaS Platform for Connected & Automated Vehicle Standards",
+    subtitle: "Ready Made Protocols for Connected & Automated Vehicles",
     description:
-      "Full featured SaaS platform for the Connectivity, Automation, and Vehicle Alliance. Membership hub with tiered Stripe billing, GitHub synced protocol management, AI chat assistant, developer certification, community events, 8 language i18n, and a comprehensive analytics suite.",
+      "Platform for the Connectivity, Automation, and Vehicle Alliance, publishing three ready made CAV protocols OCAVM short range vehicle mesh, OCAVS vehicle-to-server management, and OCAVI platform-to-platform interoperability  with developer certification, AI assistance, and community tooling.",
     longDescription: [
-      "Open CAV Alliance is a full featured SaaS platform for the Connectivity, Automation, and Vehicle Alliance — an organization developing open standards and protocols for connected and automated vehicles. It serves as a membership hub where industry professionals, researchers, and developers can collaborate on protocol proposals, access certification programs, attend events, manage memberships, and participate in technical discussions.",
-      "The platform features a tiered membership system with Stripe billing (Free Community, Contributor $5K/yr, Corporate $15K/yr, Strategic $45K/yr) including checkout sessions, customer portal, and webhook handling with retry logic. A GitHub synced protocol management system provides versioning, document browsing, threaded commenting, voting, proposals, and issue tracking with bidirectional repository synchronisation.",
-      "AI capabilities include a multi model chatbot (GPT-4o, DeepSeek R1) with streaming, source citations, and reasoning display; multi provider image generation (Replicate, OpenAI, Fireworks, Fal.ai); and AI powered web content analysis using Firecrawl. The platform also includes a developer certification and compliance tracking system, community features like member directories and discussion forums, events and meetings management, and a support ticket system powered by Aidbase.",
+      "Open CAV Alliance is the home of the Connectivity, Automation, and Vehicle Alliance an organization publishing ready made protocols for connected and automated vehicles. It ships three open standards: OCAVM for short-range vehicle-to-vehicle mesh and vehicle-to-infrastructure communication, OCAVS for secure vehicle-to-server management, and OCAVI for platform-to-platform interoperability across cities, operators, and service providers.",
+      "A GitHub synced protocol management system provides versioning, document browsing, threaded commenting, voting, proposals, and issue tracking with bidirectional repository synchronisation. The alliance experience spans community features like member directories and discussion forums, events and meetings management, and a developer certification and compliance tracking system.",
+      "AI capabilities include a multi model chatbot (GPT-4o, DeepSeek R1) with streaming, source citations, and reasoning display; multi provider image generation (Replicate, OpenAI, Fireworks, Fal.ai); and AI powered web content analysis using Firecrawl. A support ticket system is powered by Aidbase.",
       "Content is managed through Fumadocs MDX for documentation and changelog, and NocoDB as a headless CMS for blog and news content. A bi weekly newsletter system automates content compilation and delivery via Resend with React Email templates. The platform is fully internationalised across 8 languages and includes 10+ analytics providers with environment based toggling.",
     ],
     tags: [
@@ -413,6 +414,79 @@ export const projects: Project[] = [
         ],
       },
     ],
-    role: "Full stack developer and sole contributor — designed the entire system architecture with provider abstraction patterns, built all features from authentication to AI, managed infrastructure across Docker, Vercel, and Cloudflare deployments.",
+    role: "Full stack developer and sole contributor — designed the system architecture around the three protocol standards with provider abstraction patterns, built every feature from the protocol registry to AI tooling, and managed multi platform deployments across Docker, Vercel, and Cloudflare.",
+  },
+  {
+    slug: "axons-ai-chatbot",
+    title: "AXONS AI Protocol Chatbot",
+    subtitle: "n8n-Powered Q&A Assistant for the AXONS Protocol",
+    description:
+      "AI chatbot that answers questions exclusively about the AXONS protocol — orchestrated with n8n workflows, RAG retrieval over the protocol specification, and citation-backed responses.",
+    longDescription: [
+      "The AXONS AI Protocol Chatbot is a specialised Q&A assistant that only answers questions about the AXONS protocol — the open, security-first standard for real time IoT communication built on TLS 1.3, mTLS, and Ed25519 cryptography. It gives developers, integrators, and consortium members precise, specification-grounded answers instead of generic responses.",
+      "The assistant is orchestrated through n8n workflow automation, which chains the conversation logic, retrieval, and model routing into a reusable workflow. When a user asks a question, the workflow retrieves the relevant sections of the protocol documentation and hands them to the language model with the full conversation context.",
+      "Every answer is grounded in the live protocol specification, with source citations letting users trace each response back to the exact protocol section. The chatbot integrates directly with the AXONS Protocol Website and its documentation, keeping answers consistent with the published standard as it evolves.",
+      "Built with the Vercel AI SDK for streaming responses, n8n for workflow orchestration, and the same design language as the AXONS platform so the assistant feels native to the ecosystem.",
+    ],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "n8n",
+      "Vercel AI SDK",
+      "Google Gemini",
+      "OpenAI",
+      "Orama",
+      "RAG",
+      "Tailwind CSS",
+    ],
+    href: "https://axonsprotocol.com",
+    image: "/project/aichatbot/n8n-workflow-aichatbot.png",
+    logo: "/logos/axons/axons-green.logo.png",
+    video: "/project/aichatbot/AIchatbot.mp4",
+    highlights: [
+      {
+        label: "Protocol-Only Focus",
+        detail:
+          "Restricted to the AXONS protocol, so every answer is specification-grounded — no off-topic or generic responses.",
+      },
+      {
+        label: "n8n Workflow Orchestration",
+        detail:
+          "Conversation logic, retrieval, and model routing chained into reusable n8n workflows, keeping the assistant easy to maintain and extend.",
+      },
+      {
+        label: "Citation-Backed Answers",
+        detail:
+          "Each response is traced back to the exact protocol section, with source citations rendered inline so users can verify claims.",
+      },
+      {
+        label: "Streaming Responses",
+        detail:
+          "Vercel AI SDK streaming for token-by-token responses with the look and feel of the AXONS Platform UI.",
+      },
+    ],
+    techStack: [
+      {
+        category: "Framework",
+        items: ["Next.js", "TypeScript"],
+      },
+      {
+        category: "Workflow",
+        items: ["n8n"],
+      },
+      {
+        category: "AI / LLM",
+        items: ["Vercel AI SDK", "Google Gemini", "OpenAI"],
+      },
+      {
+        category: "RAG",
+        items: ["Orama", "Semantic Search"],
+      },
+      {
+        category: "Styling",
+        items: ["Tailwind CSS"],
+      },
+    ],
+    role: "Designed and built the protocol-focused chatbot, engineered the n8n workflows for retrieval and model routing, and integrated it with the AXONS Protocol Website.",
   },
 ];
