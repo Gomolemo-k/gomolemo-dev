@@ -84,7 +84,7 @@ export default function Hero() {
           </motion.a>
           <motion.a
             href="#contact"
-            className="rounded-full border border-border px-8 py-3.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors hover:border-accent hover:bg-accent-light/20"
+            className="rounded-full bg-accent px-8 py-3.5 text-sm font-medium text-white shadow-lg shadow-accent/25 transition-colors hover:bg-accent-hover"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -93,7 +93,7 @@ export default function Hero() {
           <motion.a
             href="/Gomolemo-Kgatitsoe-CV.pdf"
             download
-            className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3.5 text-sm font-medium text-foreground backdrop-blur-sm transition-colors hover:border-accent hover:bg-accent-light/20"
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-medium text-white shadow-lg shadow-accent/25 transition-colors hover:bg-accent-hover"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
